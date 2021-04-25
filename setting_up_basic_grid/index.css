@@ -1,0 +1,14 @@
+html,body{
+    margin: 0;
+}
+
+body{
+    display: grid;
+    /* grid-template-columns: 200px 400px 600px;
+    grid-template-rows: 200px 500px 800px; */
+    grid-template: 200px 500px 800px/ 200px 400px 600px;  /*short hand */
+}
+
+h1,p{
+    border: 2px solid magenta;
+}
