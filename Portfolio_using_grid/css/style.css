@@ -8,8 +8,11 @@ body {
 .portfolio {
     padding: 1em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* auto-fit and auto-fill looks almost same for six pics you will see the difference in two pics */
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    /* grid-template-columns: repeat(3, 1fr); */
     /* grid-template-columns: 1fr 1fr 1fr; */
+
     grid-gap: 1em;
     /* grid-template-areas: 
         "header header header"
