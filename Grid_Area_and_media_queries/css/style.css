@@ -13,7 +13,7 @@ body{
   @media(min-width: 600px){
     .grid {
         display: grid;
-        grid-template: 25vh 50vh 25vh / 2em auto auto 2em;
+        grid-template: 25vh 50vh 25vh / 10% minmax(15%, 40%) minmax(15%,40%) 10%;
 
         grid-template-areas: 
             "header header header header"
