@@ -8,7 +8,8 @@ body {
 .portfolio {
     padding: 1em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr; */
     grid-gap: 1em;
     /* grid-template-areas: 
         "header header header"
