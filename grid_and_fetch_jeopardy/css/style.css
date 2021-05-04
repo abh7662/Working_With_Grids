@@ -1,0 +1,33 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgreen;
+}
+
+.board{
+    display: grid;
+    grid-template: repeat(5, 20%)/repeat(4, 25%);
+    height: 100vh;
+
+    /* grid-gap: 1em; */
+}
+
+.board *{
+    border: .1rem solid black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.my-category-title{
+    text-transform: uppercase;
+    grid-row-start: 1;
+    background-color: lightblue;
+}
+
+.my-category-clue{
+    font-size: 2rem;
+    font-weight: bold;
+}
