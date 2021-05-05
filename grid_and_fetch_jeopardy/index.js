@@ -14,7 +14,7 @@
 */
 
 async function getCategories(){
-    return await fetch("https://jservice.io/api/categories?count=4&offset=4")
+    return await fetch("https://jservice.io/api/categories?count=5&offset=5")
         .then(response => response.json())
         .then(data => data)
         .catch(err => console.log(err))
@@ -27,6 +27,7 @@ getCategories().then(categories =>{
     <div class="my-category-clue" style="grid-row-start:3">$200</div>
     <div class="my-category-clue" style="grid-row-start:4">$300</div>
     <div class="my-category-clue" style="grid-row-start:5">$400</div>
+    <div class="my-category-clue" style="grid-row-start:6">$500</div>
     `).join('')
     console.log(myCategoryTitle)
     document.body.innerHTML = `
@@ -35,3 +36,15 @@ getCategories().then(categories =>{
         </div>
     `
 })
+
+/* 
+    Jeopardy (Challenge)
+    
+    Update getCategories to take 
+        count/offset arguments
+    Fetch 5 Categories (Update the display as necessary)
+    
+    Write a getClueHtml() function
+        calculate grid-row-start based on the input value
+        which will always be a multiple of 100 
+*/
