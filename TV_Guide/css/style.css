@@ -1,0 +1,36 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgreen;
+    padding: 1rem;
+}
+
+.tv-guide{
+    display: grid;
+    height: minmax(300px, auto);
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: lightblue;
+    padding: 3px;
+    grid-template-rows: 200px;
+}
+
+.seasons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.season{
+    background-color: lightyellow;
+    padding: 2px;
+    border: 1px solid black;
+    /* width: calc(95% / 4); */
+    text-align: center;
+    margin: 2px;
+    font-size: 1.3rem;
+}
+
+.content{
+    text-align: center;
+    font-size: 1.2rem;
+    overflow-y: scroll;
+}
