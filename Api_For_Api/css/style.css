@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgreen;
+    padding: 1rem;
+}
+
+
+.my-api{
+    display: grid;
+    background-color: lightblue;
+    border-radius: 20px;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3 1000px); */
+    font-size: 1.8rem;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.api-name-category{
+    grid-column: span 3;
+    text-align: center;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+
+}
+
+.api-description{
+    grid-column: span 3;
+    align-self: center;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 30px;
+}
+
+.api-auth{
+    grid-column: span 1;
+
+}
+
+.api-https{
+    grid-column: -1/-2;
+    justify-content: end;
+    text-align: end;
+}
