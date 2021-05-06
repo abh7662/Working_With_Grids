@@ -215,14 +215,13 @@ const data = [
 
 console.log(data)
 
-function getLibraryHTML(singledata){
+function getLibraryHTML(book){
     return `<div class="my-book">
-    <div class="side"></div>
-    <div class="main">${singledata.title}</div>
-    <div class="bottom"></div>
-    </div>
-    `
+    <div class="my-book-cover">${book.title}</div>
+    <div class="my-book-spine"></div>
+    <div class="my-book-footer"></div>
+</div>`
 }
 
 // document.body.innerHTML = getLibraryHTML(data[0])
-document.body.innerHTML = `<div class="my-lib"> ${data.map(getLibraryHTML).join('')} </div>`
+document.body.innerHTML = `<div class="my-library"> ${data.map(getLibraryHTML).join('')} </div>`
