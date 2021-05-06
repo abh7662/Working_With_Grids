@@ -6,7 +6,7 @@ html, body {
 
 .board{
     display: grid;
-    grid-template: repeat(5, 16.6%)/repeat(4, 20%);
+    grid-template: repeat(5, 20%)/repeat(4, 20%);
     height: 100vh;
 
     /* grid-gap: 1em; */

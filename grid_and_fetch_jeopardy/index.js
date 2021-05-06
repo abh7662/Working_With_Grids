@@ -13,21 +13,22 @@
         using CSS Grid
 */
 
-async function getCategories(){
-    return await fetch("https://jservice.io/api/categories?count=5&offset=5")
+async function getCategories(count,offset){
+    return await fetch(`https://jservice.io/api/categories?count=${count}&offset=5`)
         .then(response => response.json())
         .then(data => data)
         .catch(err => console.log(err))
 }
-
-getCategories().then(categories =>{
+function getClueHtml(clueValue){
+    return `<div class="my-category-clue" style="grid-row-start:${clueValue/100 + 1}">$${clueValue}</div>`
+}
+getCategories(5).then(categories =>{
     // console.log(categories)
     const myCategoryTitle = categories.map(category => `<div class="my-category-title">${category.title}</div>
-    <div class="my-category-clue" style="grid-row-start:2">$100</div>
-    <div class="my-category-clue" style="grid-row-start:3">$200</div>
-    <div class="my-category-clue" style="grid-row-start:4">$300</div>
-    <div class="my-category-clue" style="grid-row-start:5">$400</div>
-    <div class="my-category-clue" style="grid-row-start:6">$500</div>
+    ${getClueHtml(100)}
+    ${getClueHtml(200)}
+    ${getClueHtml(300)}
+    ${getClueHtml(400)}
     `).join('')
     console.log(myCategoryTitle)
     document.body.innerHTML = `

@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightyellow;
+    padding: 1rem;
+    /* height: 100vh; */
+}
+.my-lib{
+    /* background-color: magenta; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px,160px));
+    grid-gap: 10px;
+}
+.my-book{
+    display: grid;
+    border: 2px solid black;
+    height: 25vh;
+    width: 150px;
+    align-items: center;
+    border-radius: 5% 0 0 5%;
+    grid-template-areas: 
+        "side main"
+        "bottom bottom"
+        ;
+}
+
+.side{
+    grid-area: side;
+    background-color: #4A4238;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: .1rem solid black;
+    font-size: 1.5rem;
+    height: 24vh;
+    width: 20px;
+    border-radius: 10% 0 0 0;
+
+}
+.main{
+    grid-area: main;
+    background-color: #90EE90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: .1rem solid black; */
+    font-size: 1.5rem;
+    height: 24vh;
+    width: 128px;
+    text-align: center;
+}
+.bottom{grid-area: bottom;
+    background-color: #D3D3D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    height: .8vh;
+    width: 150px;
+    border-radius: 0% 0 0 10%;
+    border-top: .1rem solid black;
+
+}
